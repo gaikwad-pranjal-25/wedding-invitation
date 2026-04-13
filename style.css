@@ -79,11 +79,20 @@ body {
 
 .tap-text {
     position: absolute;
-    bottom: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     color: white;
-    font-size: 16px;
-    letter-spacing: 1px;
-    animation: blink 1.5s infinite;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.4); /* optional for visibility */
+    padding: 8px 14px;
+    border-radius: 20px;
+
+    animation: pulse 1.5s infinite;
 }
 
 /* MAIN CONTENT */
