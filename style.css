@@ -79,7 +79,7 @@ body {
 
 .tap-text {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -88,9 +88,9 @@ body {
     font-weight: 500;
     text-align: center;
 
-    background: rgba(0, 0, 0, 0.4); /* optional for visibility */
+    /*background: rgba(0, 0, 0, 0.4); /* optional for visibility 
     padding: 8px 14px;
-    border-radius: 20px;
+    border-radius: 20px;*/
 
     animation: pulse 1.5s infinite;
 }
@@ -271,6 +271,12 @@ body {
     to { background-position: 300% center; }
 }
 
+@keyframes pulse {
+    0% {opacity: 0.6;}
+    50% {opacity: 1;}
+    100% {opacity: 0.6;}
+}
+
 @keyframes heroReveal {
     from {
         opacity: 0;
@@ -416,6 +422,24 @@ body {
     white-space: nowrap;
 }
 
+.tap-venue {
+    width: 100%;              /* take full width */
+    text-align: center;       /* center text */
+
+    margin: 15px 160px 10px;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #d4af37;
+
+    animation: fadeBlink 2s ease-in-out infinite;
+}
+/* fade animation */
+@keyframes fadeBlink {
+    0%   { opacity: 0; transform: translateX(-50%) translateY(-5px); }
+    50%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-5px); }
+}
 
 @media (max-width: 360px) {
     .venue .event-overlay h2 {
